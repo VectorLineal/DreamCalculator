@@ -27,12 +27,17 @@ function evaluateHours(){
             totalHours--;
         }
 
-        //se restan 120 minutos que no implican descanso
-        if(totalHours >= 2){
-            totalHours -= 2;
+        //se restan 30 minutos que no implican descanso
+        if(overMinutes >= 30){
+            overMinutes -= 2;
         }else {
-            totalHours = 0;
-            overMinutes = 0;
+            if(totalHours >= 1){
+                totalHours--;
+                overMinutes += 30
+            }else{
+                totalHours = 0;
+                overMinutes = 0;
+            }
         }
         totalMinutes = (totalHours * 60) + overMinutes;
         totalCycles = Math.floor(totalMinutes / 90);
