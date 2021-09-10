@@ -37,7 +37,7 @@ function evaluateHours(){
         totalMinutes = (totalHours * 60) + overMinutes;
         totalCycles = Math.floor(totalMinutes / 90);
 
-        let message = "Teniendo en cuenta que 2 horas del ciclo del sueño no aportan al descanso, has descansado " + totalHours + " horas equivalentes a " + totalMinutes + " minutos que corresponden a " + totalCycles + " ciclos de sueño.\n";
+        let message = "Has descansado " + totalHours + " horas equivalentes a " + totalMinutes + " minutos que corresponden a " + totalCycles + " ciclos de sueño.\n";
 
         if(totalHours < 7){
             document.getElementById("warning").style.display = "block"
